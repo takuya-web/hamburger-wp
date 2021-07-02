@@ -1,0 +1,17 @@
+// レスポンシブ対応(iPhone)
+$sm : 392px;
+
+@mixin iPhone {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+// レスポンシブ対応(iPad)
+$md : 851px;
+
+@mixin iPad {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}

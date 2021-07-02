@@ -1,0 +1,162 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+//トップページ
+.p-main-visual {
+  background-image: url("../../../images/index_mainvisual_img01.svg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 530px;
+  margin: 0 367px 0 0;
+
+  @include iPad {
+    height: 285px;
+    background-position: 0 50%;
+    margin: 0;
+  }
+  @include iPhone {
+    height: 285px;
+    background-position: 50% 0;
+  }
+
+  & h1 {
+    font-size: 2.5rem;
+    color: $white;
+    font-family: 'M PLUS 1p', sans-serif;
+    padding: 231px 0 0 5.599%;
+    @include iPad {
+      font-size: 2.25rem;
+      padding: 119px 0 0 86px;
+    }
+    @include iPhone {
+      padding: 119px 0 0 25px;
+    }
+  }
+}
+
+
+//archive&archive-searchページ
+.p-main-visual__archive {
+  background-image: url("../../../images/archive_mainvisual_img01.svg");
+  background-position: 30%;
+  position: relative;
+  height: 239px;
+  color: $white;
+  @include iPad {
+    height: 283px;
+    background-position: 50%;
+  }
+  &::before {
+    background-color: $black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 239px;
+    @include iPad {
+      height: 283px;
+    }
+  }
+  & h2 {
+    position: absolute;
+    left: 37px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    font-size: 3.75rem;
+    @include iPad {
+      font-size: 2.25rem;
+    }
+    @include iPhone {
+      left: 10%;
+    }
+  }
+  & span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    margin: 0 0 0 20px;
+    @include iPhone {
+      display: block;
+      margin: 7px 0 0 0;
+    }
+  }
+}
+
+
+//singleページ
+.p-main-visual__single {
+  background-image: url("../../../images/single_mainvisual_img01.svg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 530px;
+  margin: 0 367px 0 0;
+  @include iPad {
+    height: 500px;
+    background-position: 50%;
+    margin: 0;
+  }
+  @include iPhone {
+    height: 285px;
+    background-position: 50% 0;
+  }
+
+  & h1 {
+    font-size: 2.5rem;
+    color: $white;
+    font-family: 'M PLUS 1p', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0 0 5.599%;
+    @include iPad {
+      font-size: 3.75rem;
+      padding: 0 0 0 10.313%;
+    }
+    @include iPhone {
+      font-size: 2.25rem;
+      padding: 0 0 0 25px;
+    }
+  }
+}
+
+//pageページ
+.p-main-visual__page {
+  background-image: url("../../../images/page_mainvisual_img01.svg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 530px;
+  margin: 0 367px 0 0;
+  @include iPad {
+    height: 500px;
+    background-position: 50%;
+    margin: 0;
+  }
+  @include iPhone {
+    height: 285px;
+    background-position: 50% 0;
+  }
+
+  & h1 {
+    font-size: 2.5rem;
+    color: $white;
+    font-family: 'M PLUS 1p', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0 0 5.599%;
+    @include iPad {
+      font-size: 3.75rem;
+      padding: 0 0 0 10.313%;
+    }
+    @include iPhone {
+      font-size: 2.25rem;
+      padding: 0 0 0 25px;
+    }
+  }
+}

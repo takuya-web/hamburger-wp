@@ -1,0 +1,97 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+// prev-arrow ※mixinに記載
+.p-pagenation {
+  margin-bottom: 64px;
+  @include iPad {
+    margin-bottom: 37px;
+  }
+  &__prev-arrow {
+    position: relative;
+    padding: 0 20px;
+  }
+  &__prev-arrow::before {
+    @include arrow;
+    transform: translateX(-100%) translateY(-50%) rotate(-135deg);
+  }
+  &__prev-arrow::after {
+    @include arrow;
+    transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+  }
+  &__next-arrow {
+    position: relative;
+    padding: 0 20px;
+  }
+  &__next-arrow::before {
+    @include arrow;
+    left: 0;
+    transform: translateX(100%) translateY(-50%) rotate(45deg);
+  }
+  &__next-arrow::after {
+    @include arrow;
+    left: 0;
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+  }
+}
+
+.p-pagenation__wrapper {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: $gray;
+  max-height: 35px;
+  padding: 0 6.511%;
+  @include iPad {
+    padding: 0 4.678%;
+  }
+  @include iPhone {
+    flex-wrap: nowrap;
+  }
+}
+.p-pagenation {
+  &__title, &__pages {
+    @include iPhone {
+      display: none;
+    }
+  }
+  &__prev, &__next {
+    display: none;
+    @include iPhone {
+      display: block;
+    }
+  }
+  &__prev {
+    @include iPhone {
+      margin-right: auto;
+    }
+  }
+  &__page-number {
+    padding: 7px 13px;
+    border: 1px solid $gray;
+    margin-left: 15px;
+    @include iPhone {
+      display: none;
+    }
+  }
+  & li {
+    margin-bottom: 1px;
+    @include iPhone {
+      margin-bottom: 0;
+    }
+  }
+  & li:nth-of-type(5) {
+    background-color: $brown;
+    color: $white;
+    margin-left: 17.3px;
+  }
+  & li:nth-last-of-type(3) {
+    margin-right: 17.3px;
+  }
+  &__pages {
+    margin-right: 19.3px;
+  }
+}

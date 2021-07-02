@@ -1,0 +1,67 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+// サイドバー
+.c-sidebar {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  background-color: $light-beige;
+  color: $gray;
+  width: 367px;
+  height: 100%;
+  padding: 178px 0 0 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  // -webkit-overflow-scrolling: touch;
+  @include iPad {
+    position: fixed;
+    display: none;
+    overflow-y: scroll;
+  }
+  @include iPhone {
+    display: none;
+    width: 328px;
+    overflow-y: scroll;
+  }
+  & h2 {
+    font-size: 1.5rem;
+    padding: 34px 0 0 46px;
+  }
+  & ul {
+    list-style: none;
+    padding: 40px 0 0 66px;
+    font-size: 1.25rem;
+  }
+  & li {
+    padding: 0 0 23px 0;
+  }
+}
+
+// closeボタン
+.c-close__button {
+  @include iPad {
+    display: inline-block;
+    width: 2rem;
+    height: 0.2rem;
+    background: currentColor;
+    border-radius: 0.1em;
+    position: absolute;
+    top: 41px;
+    right: 17px;
+    transform: rotate(45deg);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      transform: rotate(90deg);
+    }
+  }
+}

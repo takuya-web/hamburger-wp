@@ -1,0 +1,96 @@
+@import "../../foundation/responsive";
+@import "../../foundation/mixin";
+
+.p-branch-menu {
+  & ul {
+    display: flex;
+    justify-content: center;
+    padding: 7.8% 9.5% 11.48% 9.5%;
+    @include iPad {
+      padding: 4.8%;
+    }
+    @include iPhone {
+      display: initial;
+    }
+  }
+  &__take-out-01 {
+    background-image: url("../../../images/index_main_img01.svg");
+    background-size: cover;
+    background-position: 50%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 625px;
+    min-width: 50%;
+    height: 1193px;
+    margin: 0 3.2% 0 0;
+    padding: 0 11px 11px 12px;
+    @include iPad {
+      height: 681px;
+      margin: 0 2.66% 0 0;
+      padding: 0 11px 11px 12px;
+    }
+    @include iPhone {
+      width: auto;
+      height: 642px;
+      margin: 20px;
+      padding: 10px;
+    }
+    & h2 {
+      font-size: 5rem;
+      color: #EAEAEA;
+      font-family: 'M PLUS 1p', sans-serif;
+      @include iPad {
+        font-size: 2.5625rem;
+      }
+    }
+    & h2::after {
+    @include h2-bottom-bar;
+    }
+  }
+
+  &__take-out-02 {
+    background-image: url("../../../images/index_main_img02.svg");
+    background-size: cover;
+    background-position: 50%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 625px;
+    min-width: 50%;
+    height: 1193px;
+    margin: 0 0 0 3.2%;
+    padding: 0 11px 11px 12px;
+    @include iPad {
+      height: 681px;
+      margin: 0 0 0 2.66%;
+      padding: 0 11px 11px 12px;
+    }
+    @include iPhone {
+      width: auto;
+      height: 642px;
+      margin: 20px;
+      padding: 10px;
+    }
+    & h2 {
+      font-size: 5rem;
+      color: #EAEAEA;
+      font-family: 'M PLUS 1p', sans-serif;
+      @include iPad {
+        font-size: 2.5625rem;
+      }
+    }
+    & h2::after {
+      @include h2-bottom-bar;
+      }
+  }
+
+  &__small-01 {
+    @include branch-menu__small;
+    margin: auto 0 0 0;
+  }
+  &__small-02 {
+    @include branch-menu__small;
+    margin: 9px 0 0 0;
+  }
+}

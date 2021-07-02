@@ -1,0 +1,45 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+// menuボタン
+.c-menu__button {
+  display: inline-block;
+  background-color: $white;
+  color: $gray;
+  border-radius: 40px;
+  font-size: 1rem;
+  width: 50.652%;
+  height: 16.139%;
+  @include iPad {
+    width: 163.16px;
+    height: 42.47px;
+  }
+  @include iPhone {
+    width: 100%;
+    max-width: 163.16px;
+    height: 100%;
+    max-height: 42.47px;
+  }
+}
+
+//single-pageボタン
+.c-single-page__button {
+  display: inline-block;
+  background-color: $light-beige;
+  color: $brown;
+  border-radius: 20px;
+  border: 1px solid $gray;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 32.111%;
+  height: 104px;
+  @include iPad {
+    width: 60.938%;
+    height: 104px;
+  }
+  @include iPhone {
+    width: 100%;
+    max-width: 335px;
+    height: 81px;
+  }
+}

@@ -1,0 +1,72 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+.c-menu__container {
+  display: flex;
+  padding: 0 0 30px 0;
+  @include iPad {
+    padding: 0 0 20px 0;
+  }
+  @include iPhone {
+    flex-direction: column;
+  }
+  & img {
+    width: 50%;
+    height: 471px;
+    object-fit: cover;
+    object-position: 10%;
+    @include iPad {
+      max-height: 354.5px;
+      object-position: 35%;
+    }
+    @include iPhone {
+      width: 100%;
+      height: 230.53px;
+    }
+  }
+}
+.c-menu {
+  &__content {
+    background-color: $brown;
+    color: $white;
+    text-align: center;
+    width: 50%;
+    height: 471px;
+    @include iPad {
+      max-height: 354.5px;
+    }
+    @include iPhone {
+      width: 100%;
+    }
+    & h3 {
+      text-align: left;
+      font-size: 2.25rem;
+      padding: 8% 0 0 9%;
+      @include iPad {
+        font-size: 1.25rem;
+      }
+    }
+    & h4 {
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 8% 0 2.5% 9%;
+      @include iPad {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__text {
+    text-align: left;
+    font-size: 1rem;
+    padding: 0 16% 8% 9%;
+    max-height: 175px;
+    overflow: hidden;
+    @include iPad {
+      max-height: 224px;
+    }
+    @include iPhone {
+      max-height: 180px;
+      padding: 0 16% 12% 9%;
+    }
+  }
+}

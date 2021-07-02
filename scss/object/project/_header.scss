@@ -1,0 +1,105 @@
+@import "../../foundation/responsive";
+@import "../../foundation/color.scss";
+
+//メニューボタン
+.p-header__menu-button {
+  display: none;
+  @include iPad {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    font-size: 2.125rem;
+    color: $gray;
+  }
+  @include iPhone {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 1.25rem;
+  }
+}
+
+.p-header {
+  margin: 0 367px 0 0;
+  background-color: $linen;
+  @include iPad {
+    margin: 0;
+    text-align: center;
+  }
+  @include iPhone {
+    text-align: center;
+  }
+  &__logo {
+    display: inline-block;
+    font-size:3.344vw;
+    vertical-align: middle;
+    margin: auto 0 auto 4.232%;
+    color: $gray;
+    @include iPad {
+      font-size: 2.5rem;
+      padding: 40px 0 38px 0;
+      margin: 0;
+    }
+    @include iPhone {
+      font-size: 10.257vw;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include iPad {
+      display: initial;
+    }
+  }
+}
+
+.p-serch-form {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 86px 30px 85px 0;
+  font-size: 1rem;
+  &__search {
+    width: 396px;
+    min-width: 0;
+    height: 46px;
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 10px;
+    @include iPad {
+      height: 46px;
+      width: 396px;
+    }
+    @include iPhone {
+      height: 46px;
+      width: 230px;
+    }
+  }
+  &__submit {
+    background-color: $light-beige;
+    border: 1px solid $gray;
+    width: 136px;
+    height: 46px;
+    margin: 0 0 0 14px;
+    border-radius: 10px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 1rem;
+    @include iPad {
+      padding: 10px 51px;
+    }
+    @include iPhone {
+      width: 78px;
+      padding: 10px 22px; 
+      margin: 0 0 0 12px;
+    }
+  }
+  @include iPad {
+    padding: 0 0 40px 0;
+  }
+  @include iPhone {
+    padding: 0 0 40px 0;
+  }
+}
