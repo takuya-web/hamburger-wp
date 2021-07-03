@@ -5,8 +5,10 @@
   & ul {
     display: flex;
     justify-content: center;
-    padding: 7.8% 9.5% 11.48% 9.5%;
+    padding: 7.8% 5.833% 11.48% 5.833%;
+    margin: 0 367px 0 0;
     @include iPad {
+      margin: 0;
       padding: 4.8%;
     }
     @include iPhone {
@@ -14,7 +16,7 @@
     }
   }
   &__take-out-01 {
-    background-image: url("../../../images/index_main_img01.svg");
+    background-image: url("../images/index_main_img01.svg");
     background-size: cover;
     background-position: 50%;
     list-style: none;
@@ -50,7 +52,7 @@
   }
 
   &__take-out-02 {
-    background-image: url("../../../images/index_main_img02.svg");
+    background-image: url("../images/index_main_img02.svg");
     background-size: cover;
     background-position: 50%;
     list-style: none;

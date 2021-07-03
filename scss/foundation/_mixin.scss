@@ -29,13 +29,13 @@
     font-size: 1rem;
     padding: 0 25px 0 19px;
     height: 97px;
+    overflow: hidden;
     @include iPad {
       padding: 0 15px 22px 11px;
     }
     @include iPhone {
       height: 72px;
       padding: 0 14px 23px 10px;
-      overflow: hidden;
     }
   }
 }

@@ -1,12 +1,12 @@
-$(function() {
-  $(".p-header__menu-button").click(function() {
-    $(".c-sidebar").show("slide" , {direction: "right"} , 200);
-    $(".p-fade-layer").css("visibility","visible");
+jQuery(function() {
+  jQuery(".p-header__menu-button").click(function() {
+    jQuery(".c-sidebar").show("slide" , {direction: "right"} , 200);
+    jQuery(".p-fade-layer").css("visibility","visible");
 
-    $(function() {
-      $(".c-close__button").click(function() {
-        $(".c-sidebar").hide("slide" , {direction: "right"} , 200);
-        $(".p-fade-layer").css("visibility","hidden");
+    jQuery(function() {
+      jQuery(".c-close__button").click(function() {
+        jQuery(".c-sidebar").hide("slide" , {direction: "right"} , 200);
+        jQuery(".p-fade-layer").css("visibility","hidden");
       });
     });
   });

@@ -3,17 +3,17 @@
 
 //トップページ
 .p-main-visual {
-  background-image: url("../../../images/index_mainvisual_img01.svg");
+  background-image: url("../images/index_mainvisual_img01.svg");
   background-size: cover;
-  background-position: 50%;
+  background-position: right 367px center;
   width: 100%;
   height: 530px;
-  margin: 0 367px 0 0;
+  padding: 0 367px 0 0;
 
   @include iPad {
     height: 285px;
     background-position: 0 50%;
-    margin: 0;
+    padding: 0;
   }
   @include iPhone {
     height: 285px;
@@ -38,7 +38,7 @@
 
 //archive&archive-searchページ
 .p-main-visual__archive {
-  background-image: url("../../../images/archive_mainvisual_img01.svg");
+  background-image: url("../images/archive_mainvisual_img01.svg");
   background-position: 30%;
   position: relative;
   height: 239px;
@@ -89,7 +89,7 @@
 
 //singleページ
 .p-main-visual__single {
-  background-image: url("../../../images/single_mainvisual_img01.svg");
+  background-image: url("../images/single_mainvisual_img01.svg");
   background-size: cover;
   background-position: 50%;
   width: 100%;
@@ -126,7 +126,7 @@
 
 //pageページ
 .p-main-visual__page {
-  background-image: url("../../../images/page_mainvisual_img01.svg");
+  background-image: url("../images/page_mainvisual_img01.svg");
   background-size: cover;
   background-position: 50%;
   width: 100%;

@@ -4,7 +4,9 @@
 .p-access {
   position: relative;
   height: 649px;
+  margin: 0 367px 0 0;
   @include iPad {
+    margin: 0;
     height: 415px;
   }
   @include iPhone {

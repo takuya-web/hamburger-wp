@@ -18,6 +18,20 @@
 </head>
 <body class="l-body">
 
+<header class="p-header">
+    <article class="p-header__wrapper">
+      <h1 class="p-header__logo">Hamburger</h1>
+        <form class="p-serch-form">
+          <input class="p-serch-form__search" type="search" name="search" placeholder="">
+          <input class="p-serch-form__submit" type="submit" name="submit" value="検索">
+        </form>
+    </article>
+      <!-- menuボタン -->
+      <button class="p-header__menu-button">
+        <span>MENU</span>
+      </button>
+  </header>
+
   <!-- サイドバー -->
   <aside class="c-sidebar">
     <!-- クローズボタン -->
@@ -52,19 +66,7 @@
   </aside>
   
 
-  <header class="p-header">
-    <article class="p-header__wrapper">
-      <h1 class="p-header__logo">Hamburger</h1>
-        <form class="p-serch-form">
-          <input class="p-serch-form__search" type="search" name="search" placeholder="">
-          <input class="p-serch-form__submit" type="submit" name="submit" value="検索">
-        </form>
-    </article>
-      <!-- menuボタン -->
-      <button class="p-header__menu-button">
-        <span>MENU</span>
-      </button>
-  </header>
+
 
 
   <main class="l-main">

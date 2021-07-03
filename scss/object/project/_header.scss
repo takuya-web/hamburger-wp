@@ -22,10 +22,13 @@
 }
 
 .p-header {
-  margin: 0 367px 0 0;
+  position: absolute;
+  width: 100%;
+  padding: 0 367px 0 0;
   background-color: $linen;
   @include iPad {
-    margin: 0;
+    height: 217px;
+    padding: 0;
     text-align: center;
   }
   @include iPhone {
