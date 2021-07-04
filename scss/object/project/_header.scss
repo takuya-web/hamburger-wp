@@ -48,6 +48,12 @@
     @include iPhone {
       font-size: 10.257vw;
     }
+    & a {
+      text-decoration: none;
+    }
+    & a:visited {
+      color: $gray;
+    }
   }
   &__wrapper {
     display: flex;

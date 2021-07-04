@@ -671,6 +671,14 @@ project
   }
 }
 
+.p-header__logo a {
+  text-decoration: none;
+}
+
+.p-header__logo a:visited {
+  color: #707070;
+}
+
 .p-header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
