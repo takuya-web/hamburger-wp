@@ -838,12 +838,14 @@ project
   position: relative;
   height: 239px;
   color: #fff;
+  margin: 0 367px 0 0;
 }
 
 @media screen and (max-width: 851px) {
   .p-main-visual__archive {
     height: 283px;
     background-position: 50%;
+    margin: 0;
   }
 }
 
@@ -1455,12 +1457,14 @@ project
 .p-main-contents__archive {
   font-family: 'M PLUS 1p', sans-serif;
   margin: 0 auto;
-  padding: 3.907% 6.511% 9.766%;
+  padding: 3.68% 5.255% 7.88%;
+  margin: 0 367px 0 0;
 }
 
 @media screen and (max-width: 851px) {
   .p-main-contents__archive {
     padding: 0 4.677% 12.651%;
+    margin: 0;
   }
 }
 
@@ -1837,12 +1841,12 @@ project
 }
 
 .p-pagenation {
-  margin-bottom: 64px;
+  margin: 0 367px 64px 0;
 }
 
 @media screen and (max-width: 851px) {
   .p-pagenation {
-    margin-bottom: 37px;
+    margin: 0 0 37px 0;
   }
 }
 

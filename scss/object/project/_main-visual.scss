@@ -43,9 +43,11 @@
   position: relative;
   height: 239px;
   color: $white;
+  margin: 0 367px 0 0;
   @include iPad {
     height: 283px;
     background-position: 50%;
+    margin: 0;
   }
   &::before {
     background-color: $black;

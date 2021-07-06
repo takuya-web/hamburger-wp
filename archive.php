@@ -12,7 +12,7 @@
       
       <ul class="p-main-contents__menu-wrapper__archive">
         <li class="c-menu__container">
-          <img src=".//images/archive_menu_img.svg">
+          <img src="images/archive_menu_img.svg">
           <div class="c-menu__content">
             <h3>チーズバーガー</h3>
             <h4>小見出しが入ります</h4>
@@ -21,7 +21,7 @@
           </div>
         </li>
         <li class="c-menu__container">
-          <img src=".//images/archive_menu_img.svg">
+          <img src="images/archive_menu_img.svg">
           <div class="c-menu__content">
             <h3>チーズバーガー</h3>
             <h4>小見出しが入ります</h4>
@@ -30,7 +30,7 @@
           </div>
         </li>
         <li class="c-menu__container">
-          <img src=".//images/archive_menu_img.svg">
+          <img src="images/archive_menu_img.svg">
           <div class="c-menu__content">
             <h3>チーズバーガー</h3>
             <h4>小見出しが入ります</h4>

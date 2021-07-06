@@ -3,9 +3,9 @@
 
 // prev-arrow ※mixinに記載
 .p-pagenation {
-  margin-bottom: 64px;
+  margin:0 367px 64px 0;
   @include iPad {
-    margin-bottom: 37px;
+    margin:0 0 37px 0;
   }
   &__prev-arrow {
     position: relative;

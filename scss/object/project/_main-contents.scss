@@ -6,9 +6,11 @@
   &__archive {
     font-family: 'M PLUS 1p', sans-serif;
     margin: 0 auto;
-    padding: 3.907% 6.511% 9.766%;
+    padding: 3.68% 5.255% 7.88%;
+    margin: 0 367px 0 0;
     @include iPad {
       padding: 0 4.677% 12.651%;
+      margin: 0;
     }
     @include iPhone {
       padding: 0 5.334% 16.10834%;
