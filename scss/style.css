@@ -424,7 +424,13 @@ component
   color: #707070;
   width: 367px;
   height: 100%;
-  padding: 178px 0 0 0;
+  padding: 82px 0 0 0;
+}
+
+@media screen and (max-width: 851px) {
+  .c-sidebar {
+    padding: 178px 0 0 0;
+  }
 }
 
 .c-sidebar::-webkit-scrollbar {
@@ -444,6 +450,18 @@ component
     display: none;
     width: 328px;
     overflow-y: scroll;
+  }
+}
+
+.c-sidebar a {
+  display: block;
+  font-size: 2.125rem;
+  padding: 0 0 51px 46px;
+}
+
+@media screen and (max-width: 851px) {
+  .c-sidebar a {
+    display: none;
   }
 }
 
@@ -605,16 +623,17 @@ project
 -------------------------------------------------------- */
 .p-header__menu-button {
   display: none;
+  color: #707070;
 }
 
 @media screen and (max-width: 851px) {
   .p-header__menu-button {
     display: block;
     position: absolute;
+    z-index: 10;
     top: 18px;
     right: 26px;
     font-size: 2.125rem;
-    color: #707070;
   }
 }
 

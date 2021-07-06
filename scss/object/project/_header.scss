@@ -3,14 +3,22 @@
 
 //メニューボタン
 .p-header__menu-button {
+  // display: block;
+  // position: absolute;
+  // top: 82px;
+  // right: 235px;
+  // z-index: 11;
+  // font-size: 2rem;
   display: none;
+  color: $gray;
+  
   @include iPad {
     display: block;
     position: absolute;
+    z-index: 10;
     top: 18px;
     right: 26px;
     font-size: 2.125rem;
-    color: $gray;
   }
   @include iPhone {
     display: block;
@@ -19,6 +27,13 @@
     right: 16px;
     font-size: 1.25rem;
   }
+  // &::after {
+  //   content: "MENU";
+  //   display: block;
+  //   position: absolute;
+  //   z-index: 15;
+  //   font-size: 2.125rem;
+  // }
 }
 
 .p-header {

@@ -3,6 +3,7 @@
   <!-- クローズボタン -->
   <button class="c-close__button"></button>
   <!-- メニュー -->
+  <a>MENU</a>
   <h2>バーガー</h2>
   <ul>
     <li>ハンバーガー</li>

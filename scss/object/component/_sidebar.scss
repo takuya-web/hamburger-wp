@@ -10,7 +10,10 @@
   color: $gray;
   width: 367px;
   height: 100%;
-  padding: 178px 0 0 0;
+  padding: 82px 0 0 0;
+  @include iPad {
+    padding: 178px 0 0 0;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
@@ -24,6 +27,14 @@
     display: none;
     width: 328px;
     overflow-y: scroll;
+  }
+  & a {
+    display: block;
+    font-size: 2.125rem;
+    padding: 0 0 51px 46px;
+    @include iPad {
+      display: none;
+    }
   }
   & h2 {
     font-size: 1.5rem;
