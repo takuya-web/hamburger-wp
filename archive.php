@@ -1,3 +1,5 @@
+<?php /* Template Name: アーカイブページ */ ?>
+
 <?php get_header(); ?>
 <body class="l-body">
   <?php get_sidebar(); ?>
@@ -14,7 +16,7 @@
       <?php if(have_posts()):
         while(have_posts()): the_post(); ?>
           <li class="c-menu__container">
-            <img src="<?php the_post_thumbnail(); ?>">
+            <?php the_post_thumbnail(); ?>
             <div class="c-menu__content">
               <h3><?php the_title(); ?></h3>
               <h4>小見出しが入ります</h4>
@@ -27,50 +29,24 @@
       <?php else: ?>
         <p>表示するMENUがありません</p>
       <?php endif; ?>
-
-      <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
       </ul>
-          
-
-
-      <!-- <ul class="p-main-contents__menu-wrapper__archive">
-        <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
-        <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
-        <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
-      </ul> -->
     </article>
+
+    <?php 
+      $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+      $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'paged' => $paged
+      );
+      $my_query = new WP_Query( $args );
+    ?>
+    <?php
+      if(function_exists('wp_pagenavi')){
+        wp_pagenavi(array('query' => $my_query));
+      }
+      wp_reset_postdata();
+    ?>
 
     <aside class="p-pagenation">
       <ul class="p-pagenation__wrapper">
