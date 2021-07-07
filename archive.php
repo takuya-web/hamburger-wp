@@ -11,25 +11,24 @@
       <p class="p-main-contents__top-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
       
       <ul class="p-main-contents__menu-wrapper__archive">
-        <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
-        <li class="c-menu__container">
-          <img src="images/archive_menu_img.svg">
-          <div class="c-menu__content">
-            <h3>チーズバーガー</h3>
-            <h4>小見出しが入ります</h4>
-            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <button class="c-menu__button">詳しく見る</button>
-          </div>
-        </li>
-        <li class="c-menu__container">
+      <?php if(have_posts()):
+        while(have_posts()): the_post(); ?>
+          <li class="c-menu__container">
+            <img src="<?php the_post_thumbnail(); ?>">
+            <div class="c-menu__content">
+              <h3><?php the_title(); ?></h3>
+              <h4>小見出しが入ります</h4>
+              <p class="c-menu__text">
+              <!-- デフォルトpタグ囲み解除 -->
+              <?php remove_filter('the_content', 'wpautop'); the_content(); ?></p>
+              <button class="c-menu__button">詳しく見る</button>
+            </div>
+        <?php endwhile; ?>
+      <?php else: ?>
+        <p>表示するMENUがありません</p>
+      <?php endif; ?>
+
+      <li class="c-menu__container">
           <img src="images/archive_menu_img.svg">
           <div class="c-menu__content">
             <h3>チーズバーガー</h3>
@@ -39,6 +38,38 @@
           </div>
         </li>
       </ul>
+          
+
+
+      <!-- <ul class="p-main-contents__menu-wrapper__archive">
+        <li class="c-menu__container">
+          <img src="images/archive_menu_img.svg">
+          <div class="c-menu__content">
+            <h3>チーズバーガー</h3>
+            <h4>小見出しが入ります</h4>
+            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <button class="c-menu__button">詳しく見る</button>
+          </div>
+        </li>
+        <li class="c-menu__container">
+          <img src="images/archive_menu_img.svg">
+          <div class="c-menu__content">
+            <h3>チーズバーガー</h3>
+            <h4>小見出しが入ります</h4>
+            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <button class="c-menu__button">詳しく見る</button>
+          </div>
+        </li>
+        <li class="c-menu__container">
+          <img src="images/archive_menu_img.svg">
+          <div class="c-menu__content">
+            <h3>チーズバーガー</h3>
+            <h4>小見出しが入ります</h4>
+            <p class="c-menu__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <button class="c-menu__button">詳しく見る</button>
+          </div>
+        </li>
+      </ul> -->
     </article>
 
     <aside class="p-pagenation">
