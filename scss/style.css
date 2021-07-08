@@ -458,6 +458,7 @@ component
   display: block;
   font-size: 2.125rem;
   margin: 0 0 51px 46px;
+  color: #707070;
 }
 
 @media screen and (max-width: 851px) {
@@ -698,6 +699,7 @@ project
 
 .p-header__logo a {
   text-decoration: none;
+  color: #707070;
 }
 
 .p-header__logo a:visited {
@@ -874,7 +876,7 @@ project
 
 .p-main-visual__archive h2 {
   position: absolute;
-  left: 37px;
+  left: 6%;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -2012,5 +2014,77 @@ project
 
 .p-pagenation__pages {
   margin-right: 19.3px;
+}
+
+.wp-pagenavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 367px 64px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  color: #707070;
+  max-height: 35px;
+  padding: 0 6.511%;
+}
+
+@media screen and (max-width: 851px) {
+  .wp-pagenavi {
+    margin: 0 0 37px 0;
+    padding: 0 4.678%;
+  }
+}
+
+.wp-pagenavi .pages {
+  margin-right: 19.3px;
+}
+
+@media screen and (max-width: 392px) {
+  .wp-pagenavi .pages {
+    display: none;
+  }
+}
+
+.wp-pagenavi .current {
+  background-color: #3C2B1C;
+  padding: 7px 13px;
+  border: 1px solid #707070;
+  margin-left: 15px;
+  color: #fff;
+  margin-left: 17.3px;
+}
+
+.wp-pagenavi .page {
+  background-color: #fff;
+  padding: 7px 13px;
+  border: 1px solid #707070;
+  margin-left: 15px;
+  color: #707070;
+  margin-left: 17.3px;
+}
+
+.wp-pagenavi .nextpostslink {
+  font-size: 1.5rem;
+  margin-left: 17px;
+  max-height: 35px;
+}
+
+.wp-pagenavi .previouspostslink {
+  font-size: 1.5rem;
+  margin-right: 0.3px;
+  max-height: 35px;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  text-decoration: none;
+  color: #707070;
 }
 /*# sourceMappingURL=style.css.map */

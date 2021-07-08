@@ -3,7 +3,7 @@
   <!-- クローズボタン -->
   <button class="c-close__button"></button>
   <!-- メニュー -->
-  <a href="<?php echo home_url('/archive'); ?>">MENU</a> <!-- アーカイブページ呼び出し -->
+  <a href="<?php echo site_url('/menu'); ?>">MENU</a> <!-- アーカイブページ呼び出し -->
   <h2>バーガー</h2>
   <ul>
     <li>ハンバーガー</li>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<body class="l-body">
+<!-- <body class="l-body"> -->
+<body <?php body_class('l-body'); ?>>
+<?php wp_body_open(); ?>
   <?php get_sidebar(); ?>
   <main class="l-main">
     <article class="p-main-visual">

@@ -55,18 +55,18 @@
       }
     }
   }
-  &__text {
-    text-align: left;
-    font-size: 1rem;
-    padding: 0 16% 8% 9%;
-    max-height: 175px;
-    overflow: hidden;
-    @include iPad {
-      max-height: 224px;
-    }
-    @include iPhone {
-      max-height: 180px;
-      padding: 0 16% 12% 9%;
-    }
+}
+.c-menu__text {
+  text-align: left;
+  font-size: 1rem;
+  padding: 0 16% 8% 9%;
+  max-height: 175px;
+  overflow: hidden;
+  @include iPad {
+    max-height: 224px;
+  }
+  @include iPhone {
+    max-height: 180px;
+    padding: 0 16% 12% 9%;
   }
 }

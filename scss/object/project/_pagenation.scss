@@ -95,3 +95,57 @@
     margin-right: 19.3px;
   }
 }
+
+//wp-pagenavi用
+.wp-pagenavi {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 367px 64px 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  color: $gray;
+  max-height: 35px;
+  padding: 0 6.511%;
+  @include iPad {
+    margin:0 0 37px 0;
+    padding: 0 4.678%;
+  }
+  & .pages {
+    margin-right: 19.3px;
+    @include iPhone {
+      display: none;
+    }
+  }
+  & .current {
+    background-color: $brown;
+    padding: 7px 13px;
+    border: 1px solid $gray;
+    margin-left: 15px;
+    color: $white;
+    margin-left: 17.3px;
+  }
+  & .page {
+    background-color: $white;
+    padding: 7px 13px;
+    border: 1px solid $gray;
+    margin-left: 15px;
+    color: $gray;
+    margin-left: 17.3px;
+  }
+  & .nextpostslink {
+    font-size: 1.5rem;
+    margin-left: 17px;
+    max-height: 35px;
+  }
+  & .previouspostslink {
+    font-size: 1.5rem;
+    margin-right: 0.3px;
+    max-height: 35px;
+  }
+}
+.wp-pagenavi a, .wp-pagenavi span {
+  text-decoration: none;
+  color: $gray;
+}

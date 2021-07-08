@@ -1,9 +1,11 @@
 <?php
-
  	//*****************************************************************
 	//  テーマサポート
 	//*****************************************************************
 	add_theme_support('post-thumbnails'); //アイキャッチ画像
+	add_theme_support( 'automatic-feed-links' ); //テーマはフィードリンクをサポートするため必要
+	add_theme_support( 'menus' ); //テーマメニュー
+	add_theme_support( 'title-tag' ); //タイトル出力
 
 	//*****************************************************************
 	//  Prefetch
@@ -41,20 +43,59 @@
 	add_action( 'admin_bar_menu', 'remove_admin_bar_menus', 999 );
 
 	//*****************************************************************
+	//  タイトル出力
+	//*****************************************************************
+	function hamberger_title( $title ) {
+		if ( is_front_page() && is_home() ) { //トップページなら
+				$title = get_bloginfo( 'name', 'display' );
+		} elseif ( is_singular() ) { //シングルページなら
+				$title = single_post_title( '', false );
+		}
+				return $title;
+		}
+  add_filter( 'pre_get_document_title', 'hamberger_title' );
+
+	//*****************************************************************
 	//  ページ作成
 	//*****************************************************************
-	// アーカイブ
-	function post_has_archive( $args, $post_type) {
-		if ('post' == $post_type) {
-			$args['rewrite'] = true;
-			$args['has_archive'] = 'archive'; //任意のスラッグ名
+	// archive
+	function post_has_archive( $args, $post_type ) {
+		if ( 'post' == $post_type ) {
+			$args[ 'rewrite' ] = true;
+			$args[ 'has_archive' ] = 'menu'; //任意のスラッグ名
 		}
 		return $args;
 	}
-	add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+	add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
 	//*****************************************************************
-	//  その他
+	//  カスタム投稿タイプの追加
 	//*****************************************************************
+	add_action( 'init', 'custom_post_type' );
+	function custom_post_type() {
+		/*【カスタム投稿タイプの追加】 */
+		register_post_type( 'menu', // 投稿タイプのスラッグの指定
+			array(
+				'labels' => array(
+					'name' => __( 'メニュー' ), // メニューに表示されるラベル
+					'singular_name' => __( 'メニュー' ), // 単体系のラベル
+					'add_new' => _x('新しく登録する', 'メニュー'), // 新規追加のラベル、国際化対応のために投稿タイプを指定
+					'add_new_item' => __('登録する') // 新規項目追加のラベル
+				),
+				'description' => 'ディスクリプション', // ディスクリプションを指定
+				'public' => true, // 投稿タイプをパブリックにする
+				'has_archive' => true, // アーカイブを有効にする
+				'show_in_rest' => true, //Gutenberg有効化
+				'hierarchical' => false, // ページ階層の指定
+				'menu_position' =>5, // 管理画面上の配置指定
+				'supports' => array('title','editor','thumbnail','custom-fields','excerpt','author','trackbacks','comments','revisions','page-attributes') // サポートの指定
+			)
+		);
+	}
 
+	//*****************************************************************
+	//  remove_filter
+	//*****************************************************************
+	//カテゴリー説明文でHTMLタグを使う
+	remove_filter( 'pre_term_description', 'wp_filter_kses' );
 ?>
