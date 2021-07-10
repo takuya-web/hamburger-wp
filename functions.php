@@ -48,8 +48,10 @@
 	function hamberger_title( $title ) {
 		if ( is_front_page() && is_home() ) { //トップページなら
 				$title = get_bloginfo( 'name', 'display' );
-		} elseif ( is_singular() ) { //シングルページなら
-				$title = single_post_title( '', false );
+		} elseif ( is_archive() ) { //アーカイブページなら
+				$title = get_bloginfo( 'name', 'display' );
+		} elseif ( is_search() ) { //サーチページなら
+				$title = get_bloginfo( 'name', 'display' );
 		}
 				return $title;
 		}
@@ -71,27 +73,56 @@
 	//*****************************************************************
 	//  カスタム投稿タイプの追加
 	//*****************************************************************
-	add_action( 'init', 'custom_post_type' );
-	function custom_post_type() {
-		/*【カスタム投稿タイプの追加】 */
-		register_post_type( 'menu', // 投稿タイプのスラッグの指定
+	// add_action( 'init', 'custom_post_type' );
+	// function custom_post_type() {
+	// 	/*【カスタム投稿タイプの追加】 */
+	// 	register_post_type( 'menu', // 投稿タイプのスラッグの指定
+	// 		array(
+	// 			'labels' => array(
+	// 				'name' => __( 'メニュー' ), // メニューに表示されるラベル
+	// 				'singular_name' => __( 'メニュー' ), // 単体系のラベル
+	// 				'add_new' => _x('新しく登録する', 'メニュー'), // 新規追加のラベル、国際化対応のために投稿タイプを指定
+	// 				'add_new_item' => __('登録する') // 新規項目追加のラベル
+	// 			),
+	// 			'description' => 'ディスクリプション', // ディスクリプションを指定
+	// 			'public' => true, // 投稿タイプをパブリックにする
+	// 			'has_archive' => true, // アーカイブを有効にする
+	// 			'show_in_rest' => true, //Gutenberg有効化
+	// 			'hierarchical' => false, // ページ階層の指定
+	// 			'menu_position' =>5, // 管理画面上の配置指定
+	// 			'supports' => array('title','editor','thumbnail','custom-fields','excerpt','author','trackbacks','comments','revisions','page-attributes') // サポートの指定
+	// 		)
+	// 	);
+	// }
+
+	//*****************************************************************
+	//  ウィジェット
+	//*****************************************************************
+	function hamberger_widgets_init() {
+		register_sidebar(
 			array(
-				'labels' => array(
-					'name' => __( 'メニュー' ), // メニューに表示されるラベル
-					'singular_name' => __( 'メニュー' ), // 単体系のラベル
-					'add_new' => _x('新しく登録する', 'メニュー'), // 新規追加のラベル、国際化対応のために投稿タイプを指定
-					'add_new_item' => __('登録する') // 新規項目追加のラベル
-				),
-				'description' => 'ディスクリプション', // ディスクリプションを指定
-				'public' => true, // 投稿タイプをパブリックにする
-				'has_archive' => true, // アーカイブを有効にする
-				'show_in_rest' => true, //Gutenberg有効化
-				'hierarchical' => false, // ページ階層の指定
-				'menu_position' =>5, // 管理画面上の配置指定
-				'supports' => array('title','editor','thumbnail','custom-fields','excerpt','author','trackbacks','comments','revisions','page-attributes') // サポートの指定
+				'name'          => 'アーカイブウィジェット',
+				'id'            => 'archive_widget',
+				'description'   => 'アーカイブ用ウィジェットです',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2><i class="fa fa-archive" aria-hidden="true"></i>',
+				'after_title'   => "</h2>\n",
 			)
 		);
 	}
+	add_action('widgets_init', 'hamberger_widgets_init');
+
+	//*****************************************************************
+	//  検索結果から固定ページを除外
+	//*****************************************************************
+	function my_search_filter($search) {
+		if(is_search()) {
+			$search .= "AND post_type = 'post'";
+		}
+		return $search;
+	}
+	add_filter('posts_search', 'my_search_filter');
 
 	//*****************************************************************
 	//  remove_filter

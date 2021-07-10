@@ -152,9 +152,12 @@
     align-items: center;
     height: 100%;
     padding: 0 0 0 5.599%;
+    margin: 0 367px 0 0;
     @include iPad {
       font-size: 3.75rem;
       padding: 0 0 0 10.313%;
+      margin: 0;
+
     }
     @include iPhone {
       font-size: 2.25rem;

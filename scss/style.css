@@ -364,13 +364,22 @@ layout
 component
 -------------------------------------------------------- */
 .c-menu__button {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #fff;
   color: #707070;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 40px;
   font-size: 1rem;
   width: 50.652%;
   height: 16.139%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 851px) {
@@ -387,6 +396,22 @@ component
     height: 100%;
     max-height: 42.47px;
   }
+}
+
+.c-menu__button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #707070;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .c-single-page__button {
@@ -453,7 +478,7 @@ component
   }
 }
 
-.c-sidebar a {
+.c-sidebar__logo {
   text-decoration: none;
   display: block;
   font-size: 2.125rem;
@@ -462,29 +487,62 @@ component
 }
 
 @media screen and (max-width: 851px) {
-  .c-sidebar a {
+  .c-sidebar__logo {
     display: none;
   }
 }
 
-.c-sidebar a:visited {
+.c-sidebar__logo:visited {
   text-decoration: none;
   color: #707070;
 }
 
-.c-sidebar h2 {
-  font-size: 1.5rem;
-  padding: 34px 0 0 46px;
-}
-
-.c-sidebar ul {
+.c-sidebar__category {
   list-style: none;
-  padding: 40px 0 0 66px;
-  font-size: 1.25rem;
 }
 
-.c-sidebar li {
-  padding: 0 0 23px 0;
+.c-sidebar__category > a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 34px 0 0 46px;
+  color: #707070;
+}
+
+.c-sidebar__category > a a:visited {
+  text-decoration: none;
+  color: #707070;
+}
+
+.c-sidebar__list {
+  list-style: none;
+}
+
+.c-sidebar__list > a {
+  text-decoration: none;
+  display: block;
+  list-style: none;
+  padding: 22px 0 22px 66px;
+  font-size: 1.25rem;
+  color: #707070;
+}
+
+.c-sidebar__list > a a:visited {
+  text-decoration: none;
+  color: #707070;
+}
+
+.c-sidebar:-webkit-any-link {
+  text-decoration: none;
+}
+
+.c-sidebar:-moz-any-link {
+  text-decoration: none;
+}
+
+.c-sidebar:any-link {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 851px) {
@@ -607,14 +665,14 @@ component
 .c-menu__text {
   text-align: left;
   font-size: 1rem;
-  padding: 0 16% 8% 9%;
+  padding: 0 9% 8% 9%;
   max-height: 175px;
   overflow: hidden;
 }
 
 @media screen and (max-width: 851px) {
   .c-menu__text {
-    max-height: 224px;
+    max-height: 180px;
   }
 }
 
@@ -998,12 +1056,14 @@ project
           align-items: center;
   height: 100%;
   padding: 0 0 0 5.599%;
+  margin: 0 367px 0 0;
 }
 
 @media screen and (max-width: 851px) {
   .p-main-visual__page h1 {
     font-size: 3.75rem;
     padding: 0 0 0 10.313%;
+    margin: 0;
   }
 }
 
@@ -1453,6 +1513,11 @@ project
   padding: 0 10px;
 }
 
+.p-footer li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .p-footer li + li {
   border-left: 2px solid #fff;
 }
@@ -1535,12 +1600,14 @@ project
 }
 
 .p-main-contents__single {
-  padding: 60px 6.5106% 179px;
+  padding: 3.68% 5.255% 179px;
+  margin: 0 367px 0 0;
 }
 
 @media screen and (max-width: 851px) {
   .p-main-contents__single {
     padding: 60px 7.195% 60px;
+    margin: 0;
   }
 }
 

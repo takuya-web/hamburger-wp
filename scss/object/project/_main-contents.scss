@@ -53,9 +53,11 @@
 
 //singleページ
 .p-main-contents__single {
-  padding: 60px 6.5106% 179px;
+  padding: 3.68% 5.255% 179px;
+  margin: 0 367px 0 0;
   @include iPad {
     padding: 60px 7.195% 60px;
+    margin: 0;
   }
   @include iPhone{
     padding: 30px 20px 70px;

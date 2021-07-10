@@ -59,11 +59,11 @@
 .c-menu__text {
   text-align: left;
   font-size: 1rem;
-  padding: 0 16% 8% 9%;
+  padding: 0 9% 8% 9%;
   max-height: 175px;
   overflow: hidden;
   @include iPad {
-    max-height: 224px;
+    max-height: 180px;
   }
   @include iPhone {
     max-height: 180px;

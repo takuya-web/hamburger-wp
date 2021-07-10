@@ -28,7 +28,7 @@
     width: 328px;
     overflow-y: scroll;
   }
-  & a {
+  &__logo {
     text-decoration: none;
     display: block;
     font-size: 2.125rem;
@@ -38,21 +38,42 @@
       display: none;
     }
   }
-  & a:visited {
+  &__logo:visited {
     text-decoration: none;
     color: $gray;
   }
-  & h2 {
-    font-size: 1.5rem;
-    padding: 34px 0 0 46px;
-  }
-  & ul {
+  &__category {
     list-style: none;
-    padding: 40px 0 0 66px;
-    font-size: 1.25rem;
   }
-  & li {
-    padding: 0 0 23px 0;
+  &__category > a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 34px 0 0 46px;
+    color: $gray;
+    & a:visited {
+      text-decoration: none;
+      color: $gray;
+    }
+  }
+  &__list {
+    list-style: none;
+  }
+  &__list > a {
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    padding: 22px 0 22px 66px;
+    font-size: 1.25rem;
+    color: $gray;
+    & a:visited {
+      text-decoration: none;
+      color: $gray;
+    }
+  }
+  &:any-link {
+    text-decoration: none;
   }
 }
 
