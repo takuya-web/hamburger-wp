@@ -22,28 +22,28 @@
         <p>Blockquote 引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ引用タグ</p>
         <p>出典元： ○○○○○○○○○○○○</p>
       </aside>
-      <img class="p-main-contents__single-menu-image" src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg">
+      <img class="p-main-contents__single-menu-image" src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg">
 
       <div class="p-main-contents__menu-wrapper">
-        <img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg">
         <p> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
       </div>
       <div class="p-main-contents__menu-wrapper">
-        <img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg">
         <p> テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります テキストが入ります</p>
       </div>
 
-      <img class="p-main-contents__menu-list__top" src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg">
+      <img class="p-main-contents__menu-list__top" src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg">
       <ul class="p-main-contents__menu-list">
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
-        <li><img src="<?php bloginfo('template_directory'); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
+        <li><img src="<?php echo get_template_directory_uri(); ?>/images/single_main-contents_img01.svg"></li>
       </ul>
 
       <div class="p-main-contents__menu-list-wrapper">

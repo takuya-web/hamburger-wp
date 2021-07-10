@@ -51,6 +51,7 @@
 
   <!-- fade-layer -->
   <div class="p-fade-layer"></div>
+  <?php wp_link_pages(); ?>
 
   <?php wp_footer(); ?>
 </body>
